@@ -1,0 +1,125 @@
+
+.overlay {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  background-color: rgba(0, 0, 0, 0.75);
+  z-index: 99999;
+}
+
+.overlay-product {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.overlay-main-image {
+  display: block;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 15px;
+}
+.overlay-thumbnails {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  margin-top: 25px;
+}
+
+.overlay-thumbnail {
+  width: 70px;
+  height: 70px;
+  border-radius: 10px;
+  overflow: hidden;
+  cursor: pointer;
+  border: 3px solid transparent;
+  box-sizing: border-box;
+}
+.overlay-thumbnail img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.overlay-thumbnail.selected {
+  border: 3px solid hsl(26, 100%, 55%);
+}
+
+.overlay-thumbnail.selected img {
+  opacity: 0.55;
+}
+
+.close-overlay {
+  position: absolute;
+  top: -35px;
+  right: -15px;
+  width: 40px;
+  height: 40px;
+  padding: 0;
+  border: none;
+  background: transparent;
+  color: white;
+  font-size: 35px;
+  font-weight: bold;
+  line-height: 40px;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+.close-overlay:hover {
+  color: hsl(26, 100%, 55%);
+}
+.slide-button-left {
+  position: absolute;
+  top: 42%;
+  left: -20px;
+  transform: translateY(-50%);
+  width: 40px;
+  height: 40px;
+  padding: 0;
+  border: none;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  cursor: pointer;
+}
+
+.slide-button-right {
+  position: absolute;
+  top: 42%;
+  right: -20px;
+  transform: translateY(-50%);
+  width: 40px;
+  height: 40px;
+  padding: 0;
+  border: none;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  cursor: pointer;
+}
+
+.slide-button-icon {
+  width: 12px;
+  height: 12px;
+}
+
+.slide-button-icon.left {
+  filter: invert(55%) sepia(99%) saturate(2000%)
+    hue-rotate(5deg) brightness(105%) contrast(105%);
+}
+.slide-button-left.active-button .slide-button-icon,
+.slide-button-right.active-button .slide-button-icon {
+  filter: invert(55%) sepia(99%) saturate(2000%)
+    hue-rotate(5deg) brightness(105%) contrast(105%);
+}
+
+
