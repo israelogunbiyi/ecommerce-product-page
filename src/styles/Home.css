@@ -170,6 +170,7 @@
   display: flex;
   align-items: center;
   gap: 1rem;
+  color: hsl(220, 13%, 13%);
 }
 
 .quantity-count-btn {
@@ -182,6 +183,9 @@
   align-items: center;
   justify-content: space-around;
   cursor: pointer;
+}
+.quantity-count-number{
+  color: hsl(220, 13%, 13%);
 }
 
 .quantity-count-btn img {
@@ -210,6 +214,10 @@
 
 .add-to-cart-btn img {
   width: 17px;
+}
+.add-to-cart-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
 }
 
 

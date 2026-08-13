@@ -14,7 +14,7 @@ function Home() {
   const [showImage, setShowImage] = useState(productImgs?.[0] ?? null);
   const [showOverlay, setShowOverlay] = useState(false);
 
-  const [qty, setQty] = useState(1);
+  const [qty, setQty] = useState(0);
 
   return (
     <>
@@ -59,7 +59,7 @@ function Home() {
                 onClick={() => setQty((q) => Math.max(q - 1, 0))}
                 src={iconMinus}
               />
-              <span>{qty}</span>
+              <span className="quantity-count-number">{qty}</span>
               <img onClick={() => setQty((q) => q + 1)} src={iconPlus} />
             </button>
             <button
