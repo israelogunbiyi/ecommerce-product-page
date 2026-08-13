@@ -18,7 +18,8 @@
 }
 .overlay-main-image {
   display: block;
-  width: 100%;
+  width: 360px;
+  height: 360px;
   object-fit: cover;
   border-radius: 15px;
 }
